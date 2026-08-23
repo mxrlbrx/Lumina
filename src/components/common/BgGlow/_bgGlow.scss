@@ -1,0 +1,19 @@
+.bg-glow {
+	border-radius: 100%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+
+	&__lang {
+		fill: rgba(255, 122, 80, 0.15);
+		margin-left: -80px;
+	}
+
+	&__dev {
+		fill: rgba(157, 0, 255, 0.15);
+		margin-left: 80px;
+	}
+}

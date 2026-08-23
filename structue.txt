@@ -1,0 +1,33 @@
+src/
+├── components/
+│   ├── common/
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── ProgressRing.tsx
+│   │   └── Glassmorphism.tsx
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── TrackSwitcher.tsx
+│   └── flashcards/
+│       ├── Flashcard.tsx
+│       ├── DeckList.tsx
+│       └── StudyMode.tsx
+├── pages/
+│   ├── Onboarding.tsx
+│   ├── Dashboard.tsx
+│   ├── Study.tsx
+│   └── Statistics.tsx
+├── hooks/
+│   ├── useFlashcards.ts
+│   ├── useProgress.ts
+│   └── useOfflineSync.ts
+├── store/
+│   └── index.ts (Zustand или Redux)
+├── utils/
+│   ├── api.ts
+│   ├── constants.ts
+│   └── spacedRepetition.ts (SM-2 алгоритм)
+├── types/
+│   └── index.ts
+└── App.tsx

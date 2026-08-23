@@ -10,9 +10,9 @@ export default defineConfig({
 			registerType: 'autoUpdate',
 			includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png'],
 			manifest: {
-				name: 'JS/TS Flashcards',
-				short_name: 'Flashcards',
-				description: 'Карточки для повторения JS, TS, React',
+				name: 'Lumina',
+				short_name: 'Lumina',
+				description: 'Flashcards for languages & development',
 				theme_color: '#0f172a',
 				background_color: '#ffffff',
 				display: 'standalone',
