@@ -2,7 +2,12 @@
 	display: flex;
 	gap: 20px;
 
+	margin-top: 10vh;
+
 	&__card {
+		position: relative;
+		isolation: isolate;
+
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -13,18 +18,56 @@
 		width: 140px;
 		height: auto;
 
+		opacity: 0.45;
+
+		transition:
+			opacity 0.2s ease,
+			transform 0.2s ease;
+
+		&.is-active {
+			opacity: 1;
+		}
+
+		&.is-active:hover {
+			opacity: 1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			left: 50%;
+			top: 50%;
+			width: 150px;
+			height: 150px;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			filter: blur(40px);
+			opacity: 0.4;
+			pointer-events: none;
+		}
+
+		& > * {
+			position: relative;
+			z-index: 1;
+		}
+
 		&--lang {
 			border: 1.5px solid var(--main-orange);
 			box-shadow: 0 8px 16px 0 rgba(255, 122, 80, 0.15);
-
+			&::before {
+				background: var(--main-orange);
+			}
 			.study-mode__icon-wrapper {
 				background: var(--main-orange);
 			}
 		}
-
 		&--dev {
 			border: 1.5px solid var(--main-purple);
-
+			box-shadow: 0 8px 16px 0 rgba(157, 122, 255, 0.12);
+			&::before {
+				background: var(--main-purple);
+			}
 			.study-mode__icon-wrapper {
 				background: var(--main-purple);
 			}

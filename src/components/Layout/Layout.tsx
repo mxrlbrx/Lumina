@@ -1,6 +1,10 @@
-import type React from 'react';
+import { Outlet } from 'react-router-dom';
 import './_layout.scss';
 
-export function Layout({ children }: { children: React.ReactNode }) {
-	return <div className="layout"> {children} </div>;
+export function Layout() {
+	return (
+		<div className="layout">
+			<Outlet />
+		</div>
+	);
 }
